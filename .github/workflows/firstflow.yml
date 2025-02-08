@@ -1,0 +1,18 @@
+name: Print Message
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual execution
+
+jobs:
+  print_message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Print a Hello Message
+        run: echo "Hello, GitHub Actions! 🚀 Workflow executed successfully!"
